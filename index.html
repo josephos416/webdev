@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Index</title>
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/tokens.css">
+    <link rel="stylesheet" href="../styles/page.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+
+    <script type="module" src="../tsfiles/dropdown.ts"></script>
+    <script type="module" src="../tsfiles/lightdarkswitch.ts"></script>
+    <script type="module" src="../tsfiles/lists.ts"></script>
+    <script type="module" src="../tsfiles/list-item-list.ts"></script>
+    <script>
+      // Wait for the DOM to be fully loaded
+      
+      document.addEventListener('DOMContentLoaded', () => {
+          const toggleSwitch = document.getElementById('switch');        
+          toggleSwitch.addEventListener('click', () => {
+              if(event.target.on) {
+                // Apply dark mode in root
+                document.documentElement.classList.add('dark-mode');
+             } else {
+                // Revert to light mode in root
+                document.documentElement.classList.remove('dark-mode');
+             }
+          });
+      });
+  </script>
+  
+ 
+</head>
+
+<body>
+
+    <header class="pagetitle">Sportspedia</header>
+   
+    <nav class="navbar">
+        <a href="./index.html">Home</a>
+        <a href = "./Cups.html">Cups</a>
+        <a href = "./Games.html">Games</a>
+        <a href = "./Leagues.html">Leagues</a>
+        <a href = "./Players.html">Players</a>
+        <a href = "./Sports.html">Sports</a>
+        <a href = "./Teams.html">Team</a>
+    </nav>
+
+    <nav class="menu-bar">
+      <drop-down>
+        File
+        <ul slot="menu">
+          <li>New</li>
+          <li><hr /></li>
+          <li>Open</li>
+          <li>Open Recent</li>
+          <li><hr /></li>
+          <li>Save</li>
+          <li>Save As</li>
+          <li>Revert to Last Saved</li>
+          <li><hr /></li>
+          <li>Close</li>
+        </ul>
+      </drop-down>
+      <drop-down> Edit </drop-down>
+      <drop-down> View </drop-down>
+      <drop-down> Help </drop-down>
+    </nav>
+
+
+     
+    <toggle-switch id="switch">Lights</toggle-switch>
+
+
+    <list-item-list>
+      <list-item>
+          <span slot="Teamname">Dragons</span>
+          <span slot="Stadium">Dragon Arena</span>
+          <span slot="Location">Dragon City</span>
+          <span slot="Teamcost">$5,000,000</span>
+      </list-item>
+      <list-item>
+        <span slot="Teamname">APoly</span>
+        <span slot="Stadium">BNice Arena</span>
+        <span slot="Location">SLO</span>
+        <span slot="Teamcost">$5,000</span>
+      </list-item>
+    </list-item-list>
+
+      
+      <h3 class="whitebox">
+        <svg class="icon">
+          <use href="../icons/sports.svg#soccerball" />
+        </svg>
+        
+      </h3>
+      <h3 class="whitebox">
+        <svg class="icon">
+          <use href="../icons/sports.svg#football" />
+        </svg>
+        
+      </h3>
+      <h3 class="whitebox">
+        <svg class="icon">
+          <use href="../icons/sports.svg#golf" />
+        </svg>
+        
+      </h3>
+
+      
+
+
+    
+
+    <footer>
+        <p>&copy; 2024 Josephos</p>
+    </footer>
+</body>
+
+</html>
