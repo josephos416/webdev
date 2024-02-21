@@ -1,0 +1,30 @@
+/* tokens.css */
+:root {
+    --font-family: "Cinzel", serif;
+    --font-size-normal: 16px;
+    --font-size-large: 25px;
+    --size-spacing-medium: 1px;
+
+    /* ... other design tokens ... */
+    --primary-color: black;
+    --secondary-color: gray;
+    --slidercolor: green;
+    --background-color: white;
+    --nav-color: salmon;
+
+
+
+}
+
+:root.dark-mode{
+    --primary-color: white;
+    --secondary-color: gray;
+    --slidercolor: green;
+    --background-color: black;
+    --nav-color: salmon;
+
+}
+
+
+
+
